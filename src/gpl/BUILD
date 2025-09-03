@@ -24,7 +24,6 @@ cc_library(
         "src/initialPlace.cpp",
         "src/initialPlace.h",
         "src/mbff.cpp",
-        "src/mbff.h",
         "src/nesterovBase.cpp",
         "src/nesterovBase.h",
         "src/nesterovPlace.cpp",
@@ -45,6 +44,7 @@ cc_library(
     hdrs = [
         "include/gpl/MakeReplace.h",
         "include/gpl/Replace.h",
+        "src/mbff.h",
     ],
     copts = [
         "-fopenmp",
