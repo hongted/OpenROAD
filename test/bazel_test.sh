@@ -9,4 +9,5 @@ export RESULTS_DIR="${TEST_UNDECLARED_OUTPUTS_DIR}/results"
 export REGRESSION_TEST=$(realpath $REGRESSION_TEST)
 
 cd $(dirname $TEST_FILE)
+mkdir -p $RESULTS_DIR
 $REGRESSION_TEST
