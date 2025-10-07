@@ -59,10 +59,6 @@ regression_rule_test = rule(
             doc = "The Bazel test shell script.",
             allow_single_file = True,
         ),
-        "bazel_test_sh": attr.label(
-            doc = "The Bazel test shell script.",
-            allow_single_file = True,
-        ),
         "check_log": attr.bool(
             doc = "Diff the output log against <test_name>.ok",
             default = True,

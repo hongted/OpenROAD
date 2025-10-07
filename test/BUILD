@@ -25,6 +25,10 @@ filegroup(
 )
 
 # From CMakeLists.txt or_integration_tests(TESTS
+PASSFAIL_TESTS = [
+  "commands_without_load",
+]
+
 COMPULSORY_TESTS = [
     "error1",
     "get_core_die_areas",
@@ -32,9 +36,8 @@ COMPULSORY_TESTS = [
     "upf_test",
     "upf_aes",
     "write_db",
-    # pass-fail
-    "commands_without_load",
-]
+] + PASSFAIL_TESTS
+
 
 # Bazel OpenROAD is not compiled with Python support yet
 # leave as manual for now.
@@ -78,6 +81,8 @@ BIG_TESTS = [
         name = test_name,
         size = "enormous" if test_name in BIG_TESTS else "medium",
         tags = [] if test_name in COMPULSORY_TESTS else ["manual"],
+        check_passfail = True if test_name in PASSFAIL_TESTS else False,        
+        check_log = False if test_name in PASSFAIL_TESTS else True,
     )
     for test_name in COMPULSORY_TESTS + PYTHON_TESTS + BIG_TESTS
 ]

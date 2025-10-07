@@ -154,8 +154,6 @@ COMPULSORY_TESTS = [
     "design_is_routed_fail1",
     "design_is_routed_fail2",
     "dont_touch",
-    "dump_netlists",
-    "dump_netlists_withfill",
     "dump_nets",
     "dump_via_rules",
     "dump_vias",
@@ -198,7 +196,12 @@ COMPULSORY_TESTS = [
     "write_lef_and_def",
     "write_lef_polygon",
     "write_macro_placement",
+]
+
+PASSFAIL_TESTS = [
     # pass-fail
+    "dump_netlists",
+    "dump_netlists_withfill",
     "test_block",
     "test_bterm",
     "test_destroy",
@@ -216,7 +219,7 @@ MANUAL_TESTS = [
     "odb_readme_msgs_check",
 ]
 
-ALL_TESTS = COMPULSORY_TESTS + MANUAL_TESTS
+ALL_TESTS = COMPULSORY_TESTS + MANUAL_TESTS + PASSFAIL_TESTS
 
 filegroup(
     name = "regression_resources",
