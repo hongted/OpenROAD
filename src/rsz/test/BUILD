@@ -142,6 +142,8 @@ TESTS = [
     "repair_tie8",
     "repair_tie9",
     "repair_tie10_hier",
+    "repair_tie11_hier",
+    "repair_tie12_hier",
     "repair_wire1",
     "repair_wire10",
     "repair_wire11",
@@ -181,12 +183,14 @@ TESTS = [
     "resize5",
     "resize6",
     "resize_slack1",
+    "resize_slack2",
     "resize_slack3",
     "set_dont_touch1",
     "set_dont_use1",
     "split_load_hier",
     "repair_setup_vt_swap",
     "repair_setup_vt_swap2",
+    "pin_swap1",
 ]
 
 filegroup(
