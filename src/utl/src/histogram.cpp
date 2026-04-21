@@ -145,6 +145,7 @@ std::string Histogram<float>::formatBin(float val,
   return fmt::format("{:>{}.{}f}", val, width, precision);
 }
 
+template class Histogram<double>;
 template class Histogram<float>;
 template class Histogram<int>;
 
